@@ -19,4 +19,7 @@ RUN sed -i -e "23i \  username: postgres" config/database.yml && \
     sed -i -e "s/app_development/postgres/" config/database.yml
 RUN echo "web: bundle exec puma -C config/puma.rb" > Procfile
 
+# install bash
+RUN apk add bash
+
 CMD rails s -b 0.0.0.0
