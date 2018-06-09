@@ -1,7 +1,10 @@
 FROM ruby:2.5-alpine
 
 # install packages
-RUN apk add -U --no-cache bash git imagemagick6-dev
+RUN apk add -U --no-cache bash git
+
+# install imagemagick6-dev for rmagick
+RUN apk add --no-cache imagemagick6-dev
 
 # install bundler
 RUN gem install bundler
