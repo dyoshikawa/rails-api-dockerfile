@@ -1,7 +1,7 @@
 FROM ruby:2.5-alpine
 
-# install bash
-RUN apk add -U --no-cache bash
+# install packages
+RUN apk add -U --no-cache bash git
 
 # install bundler
 RUN gem install bundler
